@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+
+    #app-calendar {
+        display: grid;
+        /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; */
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        height: 100%;
+
+        .day {
+            border-bottom: 1px solid gray;
+            border-right: 1px solid gray;
+            text-align: center;
+            padding-top: 5px;
+            font-size: 12px;
+            cursor: pointer;
+            transition: background-color 200ms, color 200ms;
+
+            .name {
+                padding-bottom: 5px;
+            }
+        }
+        
+        .weekend {
+            color: cyan;
+
+            .name {
+                padding-bottom: 5px;
+            }
+        }
+        
+        .selected {
+            background-color: orangered;
+            color: white;
+        }
+    }
+    
+    
+}
+

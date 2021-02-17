@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+}
+
+body #app-calendar {
+  display: -ms-grid;
+  display: grid;
+  /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; */
+  -ms-grid-columns: (1fr)[7];
+      grid-template-columns: repeat(7, 1fr);
+  -ms-grid-rows: (1fr)[5];
+      grid-template-rows: repeat(5, 1fr);
+  height: 100%;
+}
+
+body #app-calendar .day {
+  border-bottom: 1px solid gray;
+  border-right: 1px solid gray;
+  text-align: center;
+  padding-top: 5px;
+  font-size: 12px;
+  cursor: pointer;
+  -webkit-transition: background-color 200ms, color 200ms;
+  transition: background-color 200ms, color 200ms;
+}
+
+body #app-calendar .day .name {
+  padding-bottom: 5px;
+}
+
+body #app-calendar .weekend {
+  color: cyan;
+}
+
+body #app-calendar .weekend .name {
+  padding-bottom: 5px;
+}
+
+body #app-calendar .selected {
+  background-color: orangered;
+  color: white;
+}
+/*# sourceMappingURL=index.css.map */
